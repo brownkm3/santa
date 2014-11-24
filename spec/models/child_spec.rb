@@ -19,7 +19,17 @@ RSpec.describe Child, :type => :model do
       expect(FactoryGirl.build(:child, good: true).good?).to eq('nice')
     end
     it "returns 'naughty' if good is false" do
-       expect(FactoryGirl.build(:child, good: false).good?).to eq('naughty')
+      expect(FactoryGirl.build(:child, good: false).good?).to eq('naughty')
+    end
+    it "returns lists of children who have been naughty or nice" do
+      spawn1 = FactoryGirl.build(:child, lastname: "Brown", good: true)
+      spawn2 = FactoryGirl.build(:child, lastname: "Brown", good: true)
+      spawn3 = FactoryGirl.build(:child, good: false)
+puts "here too"
+#      expect(Child.check_list("nice")).not_to be_empty
+      expect(Child.check_list("nice")).to eq([spawn1, spawn2])
+      expect Child.check_list("naughty").to eq[spawn3]
+
     end
   end
 end
