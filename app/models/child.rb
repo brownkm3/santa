@@ -1,5 +1,6 @@
 class Child < ActiveRecord::Base
   validates :firstname, presence: true
+  has_many :presents
 
   def good?
     return good ? 'nice' : 'naughty'
