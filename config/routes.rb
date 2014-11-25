@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'static_pages/town'
+
+  get 'static_pages/help'
+
   resources :presents
 
   resources :children
