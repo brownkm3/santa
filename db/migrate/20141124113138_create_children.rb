@@ -3,7 +3,7 @@ class CreateChildren < ActiveRecord::Migration
     create_table :children do |t|
       t.string :firstname
       t.string :lastname
-      t.boolean :good
+      t.boolean :good, :default => true
 
       t.timestamps
     end
