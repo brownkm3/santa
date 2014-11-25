@@ -24,16 +24,17 @@ RSpec.describe Child, :type => :model do
     end
 
     context "when checking the list" do
+      before:each do
+        @spawn1 = FactoryGirl.create(:child, good: true)
+        @spawn2 = FactoryGirl.create(:child, good: true)
+        @spawn3 = FactoryGirl.create(:child, good: false)
+      end
       it "provides a list for Santa to check" do
-        FactoryGirl.create(:child, good: true)
-        expect(Child.check_list("nice")).not_to be_empty
+        expect(Child.check_list).not_to be_empty
       end
       it "tells him who's been naughty or nice" do
-        spawn1 = FactoryGirl.create(:child, good: true)
-        spawn2 = FactoryGirl.create(:child, good: true)
-        spawn3 = FactoryGirl.create(:child, good: false)
-        expect(Child.check_list("nice")).to eq([spawn1, spawn2])
-        expect(Child.check_list("naughty")).to eq([spawn3])
+        expect(Child.check_list("nice")).to eq([@spawn1, @spawn2])
+        expect(Child.check_list("naughty")).to eq([@spawn3])
       end
     end
   end
