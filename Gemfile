@@ -49,6 +49,8 @@ end
 group :test do
   gem 'faker'
   gem 'capybara'
+  gem 'cucumber-rails'
+  gem 'database_cleaner'
   gem 'guard-rspec'
   gem 'launchy'
 end

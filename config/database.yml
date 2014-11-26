@@ -9,7 +9,7 @@ development:
   <<: *default
   database: santa_development 
 
-test:
+test: &test
   <<: *default
   database: santa_test
 
@@ -19,3 +19,6 @@ production: &production
   username: santa
   password: hohoho
 
+
+cucumber:
+  <<: *test
