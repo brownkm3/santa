@@ -7,13 +7,6 @@ RSpec.describe StaticPagesController, :type => :controller do
       get :town
       expect(response).to have_http_status(:success)
     end
-    it "returns the Town page" do 
-      get :town
-      expect(response).to contain("Town")
-      #expect(response.body).to match(/Town/im)
-      #parsed_body = JSON.parse(response.body)
-      puts response 
-    end
   end
 
   describe "GET help" do

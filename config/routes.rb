@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :users
+
   get 'static_pages/town'
 
   get 'static_pages/help'
@@ -6,6 +8,7 @@ Rails.application.routes.draw do
   resources :presents
 
   resources :children
+  resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
