@@ -1,16 +1,9 @@
-<html>
-
-  <head>
-    <% provide(:title, "Town") %>
-  </head>
-
   <h1>Welcome to town!</h1>
   <p>
     This is the home page for the Santa on Rails application.
     </p>
     <p><a href="<%= children_path %>">Santa's List</a></p>
-    <p>Children can check the present list from <a href="/presents">here</a></p>
+<%= link_to 'Check my list', presents_path, class: 'btn btn-success' %>
 
-    <p> <a href="<%= new_user_path %>">Create New User</a></p>
-</html>
+    <%= link_to 'Log in', sessions_new_path, class: 'btn btn-success' %>
 

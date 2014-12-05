@@ -20,5 +20,5 @@ And "there are naughty and nice children on the list" do
 end
 
 Then "he knows who has been naughty or nice" do
-  expect(page).to have_content("Bob") 
+  expect(page).to have_content("Good") 
 end

@@ -5,6 +5,7 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
 ActiveSupport	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c
+AddHashedPasswordToUser	db/migrate/20141203133842_add_hashed_password_to_user.rb	/^class AddHashedPasswordToUser < ActiveRecord::Migration$/;"	c
 Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Santa
 ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
 ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
@@ -13,19 +14,27 @@ ChildrenController	app/controllers/children_controller.rb	/^class ChildrenContro
 ChildrenHelper	app/helpers/children_helper.rb	/^module ChildrenHelper$/;"	m
 CreateChildren	db/migrate/20141124113138_create_children.rb	/^class CreateChildren < ActiveRecord::Migration$/;"	c
 CreatePresents	db/migrate/20141125133043_create_presents.rb	/^class CreatePresents < ActiveRecord::Migration$/;"	c
+CreateUsers	db/migrate/20141127094759_create_users.rb	/^class CreateUsers < ActiveRecord::Migration$/;"	c
 Present	app/models/present.rb	/^class Present < ActiveRecord::Base$/;"	c
 PresentsController	app/controllers/presents_controller.rb	/^class PresentsController < ApplicationController$/;"	c
 PresentsHelper	app/helpers/presents_helper.rb	/^module PresentsHelper$/;"	m
+RemoveColumnFromModel	db/migrate/20141203140810_remove_column_from_model.rb	/^class RemoveColumnFromModel < ActiveRecord::Migration$/;"	c
 Santa	config/application.rb	/^module Santa$/;"	m
+SessionsController	app/controllers/sessions_controller.rb	/^class SessionsController < ApplicationController$/;"	c
 StaticPagesController	app/controllers/static_pages_controller.rb	/^class StaticPagesController < ApplicationController$/;"	c
 StaticPagesHelper	app/helpers/static_pages_helper.rb	/^module StaticPagesHelper$/;"	m
 UrlValidator	app/validators/url_validator.rb	/^class UrlValidator < ActiveModel::EachValidator$/;"	c
+User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
 change	db/migrate/20141124113138_create_children.rb	/^  def change$/;"	f	class:CreateChildren
 change	db/migrate/20141125133043_create_presents.rb	/^  def change$/;"	f	class:CreatePresents
+change	db/migrate/20141127094759_create_users.rb	/^  def change$/;"	f	class:CreateUsers
+change	db/migrate/20141203133842_add_hashed_password_to_user.rb	/^  def change$/;"	f	class:AddHashedPasswordToUser
+change	db/migrate/20141203140810_remove_column_from_model.rb	/^  def change$/;"	f	class:RemoveColumnFromModel
 check_list	app/models/child.rb	/^  def self.check_list *naughty_or_nice$/;"	F	class:Child
 child_params	app/controllers/children_controller.rb	/^    def child_params$/;"	f	class:ChildrenController
 create	app/controllers/children_controller.rb	/^  def create$/;"	f	class:ChildrenController
 create	app/controllers/presents_controller.rb	/^  def create$/;"	f	class:PresentsController
+create	app/controllers/sessions_controller.rb	/^  def create$/;"	f	class:SessionsController
 destroy	app/controllers/children_controller.rb	/^  def destroy$/;"	f	class:ChildrenController
 destroy	app/controllers/presents_controller.rb	/^  def destroy$/;"	f	class:PresentsController
 edit	app/controllers/children_controller.rb	/^  def edit$/;"	f	class:ChildrenController
@@ -37,6 +46,7 @@ index	app/controllers/children_controller.rb	/^  def index$/;"	f	class:ChildrenC
 index	app/controllers/presents_controller.rb	/^  def index$/;"	f	class:PresentsController
 new	app/controllers/children_controller.rb	/^  def new$/;"	f	class:ChildrenController
 new	app/controllers/presents_controller.rb	/^  def new$/;"	f	class:PresentsController
+new	app/controllers/sessions_controller.rb	/^  def new$/;"	f	class:SessionsController
 present_params	app/controllers/presents_controller.rb	/^    def present_params$/;"	f	class:PresentsController
 set_child	app/controllers/children_controller.rb	/^    def set_child$/;"	f	class:ChildrenController
 set_present	app/controllers/presents_controller.rb	/^    def set_present$/;"	f	class:PresentsController

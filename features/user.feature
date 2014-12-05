@@ -6,5 +6,6 @@ Feature: The Santa site shows different things to different users
 
   Scenario: User creation
     Given I am on the home page
-    Then I can create a new user
+    And I create a new user
+    Then I can see the new user details
 

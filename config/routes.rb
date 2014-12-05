@@ -2,11 +2,13 @@ Rails.application.routes.draw do
   resources :users
 
   get 'static_pages/town'
-
   get 'static_pages/help'
 
-  resources :presents
+  get 'sessions/new' => 'sessions#new'
+  post 'sessions' => 'sessions#create'
+  delete 'sessions' => 'sessions#destroy'
 
+  resources :presents
   resources :children
   resources :users
 
@@ -15,9 +17,6 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
  root 'static_pages#town'
-
- get 'static_pages/town'
- get 'static_page/help'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
