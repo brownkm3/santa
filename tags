@@ -21,10 +21,14 @@ PresentsHelper	app/helpers/presents_helper.rb	/^module PresentsHelper$/;"	m
 RemoveColumnFromModel	db/migrate/20141203140810_remove_column_from_model.rb	/^class RemoveColumnFromModel < ActiveRecord::Migration$/;"	c
 Santa	config/application.rb	/^module Santa$/;"	m
 SessionsController	app/controllers/sessions_controller.rb	/^class SessionsController < ApplicationController$/;"	c
+SessionsHelper	app/helpers/sessions_helper.rb	/^module SessionsHelper$/;"	m
 StaticPagesController	app/controllers/static_pages_controller.rb	/^class StaticPagesController < ApplicationController$/;"	c
 StaticPagesHelper	app/helpers/static_pages_helper.rb	/^module StaticPagesHelper$/;"	m
 UrlValidator	app/validators/url_validator.rb	/^class UrlValidator < ActiveModel::EachValidator$/;"	c
 User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
+UsersController	app/controllers/users_controller.rb	/^class UsersController < ApplicationController$/;"	c
+admin_only	app/controllers/application_controller.rb	/^  def admin_only$/;"	f	class:ApplicationController
+admin_only	spec/controllers/application_controller_spec.rb	/^  def admin_only$/;"	f
 change	db/migrate/20141124113138_create_children.rb	/^  def change$/;"	f	class:CreateChildren
 change	db/migrate/20141125133043_create_presents.rb	/^  def change$/;"	f	class:CreatePresents
 change	db/migrate/20141127094759_create_users.rb	/^  def change$/;"	f	class:CreateUsers
@@ -34,26 +38,47 @@ check_list	app/models/child.rb	/^  def self.check_list *naughty_or_nice$/;"	F	cl
 child_params	app/controllers/children_controller.rb	/^    def child_params$/;"	f	class:ChildrenController
 create	app/controllers/children_controller.rb	/^  def create$/;"	f	class:ChildrenController
 create	app/controllers/presents_controller.rb	/^  def create$/;"	f	class:PresentsController
-create	app/controllers/sessions_controller.rb	/^  def create$/;"	f	class:SessionsController
+create	app/controllers/sessions_controller.rb	/^  def create username:, password: $/;"	f	class:SessionsController
+create	app/controllers/users_controller.rb	/^  def create$/;"	f	class:UsersController
+current_user	app/helpers/sessions_helper.rb	/^  def current_user$/;"	f	class:SessionsHelper
 destroy	app/controllers/children_controller.rb	/^  def destroy$/;"	f	class:ChildrenController
 destroy	app/controllers/presents_controller.rb	/^  def destroy$/;"	f	class:PresentsController
+destroy	app/controllers/users_controller.rb	/^  def destroy$/;"	f	class:UsersController
+do_request	spec/controllers/sessions_controller_spec.rb	/^    def do_request$/;"	f
 edit	app/controllers/children_controller.rb	/^  def edit$/;"	f	class:ChildrenController
 edit	app/controllers/presents_controller.rb	/^  def edit$/;"	f	class:PresentsController
+edit	app/controllers/users_controller.rb	/^  def edit$/;"	f	class:UsersController
 full_title	app/helpers/application_helper.rb	/^  def full_title(page_title = '')$/;"	f	class:ApplicationHelper
 good?	app/models/child.rb	/^  def good?$/;"	f	class:Child
 help	app/controllers/static_pages_controller.rb	/^  def help$/;"	f	class:StaticPagesController
 index	app/controllers/children_controller.rb	/^  def index$/;"	f	class:ChildrenController
 index	app/controllers/presents_controller.rb	/^  def index$/;"	f	class:PresentsController
+index	app/controllers/users_controller.rb	/^  def index$/;"	f	class:UsersController
+logged_in?	app/helpers/sessions_helper.rb	/^  def logged_in?$/;"	f	class:SessionsHelper
+logged_in_user	app/controllers/application_controller.rb	/^  def logged_in_user$/;"	f	class:ApplicationController.admin_only
+logged_in_user	spec/controllers/application_controller_spec.rb	/^  def logged_in_user$/;"	f	class:admin_only
+login_as	features/step_definitions/login_steps.rb	/^def login_as(user)$/;"	f
 new	app/controllers/children_controller.rb	/^  def new$/;"	f	class:ChildrenController
 new	app/controllers/presents_controller.rb	/^  def new$/;"	f	class:PresentsController
 new	app/controllers/sessions_controller.rb	/^  def new$/;"	f	class:SessionsController
+new	app/controllers/users_controller.rb	/^  def new$/;"	f	class:UsersController
 present_params	app/controllers/presents_controller.rb	/^    def present_params$/;"	f	class:PresentsController
+redirect_back_or	app/controllers/application_controller.rb	/^  def redirect_back_or(location)$/;"	f	class:ApplicationController.admin_only
+redirect_back_or	spec/controllers/application_controller_spec.rb	/^  def redirect_back_or(location)$/;"	f	class:admin_only
 set_child	app/controllers/children_controller.rb	/^    def set_child$/;"	f	class:ChildrenController
 set_present	app/controllers/presents_controller.rb	/^    def set_present$/;"	f	class:PresentsController
+set_user	app/controllers/users_controller.rb	/^    def set_user$/;"	f	class:UsersController
 show	app/controllers/children_controller.rb	/^  def show$/;"	f	class:ChildrenController
 show	app/controllers/presents_controller.rb	/^  def show$/;"	f	class:PresentsController
+show	app/controllers/users_controller.rb	/^  def show$/;"	f	class:UsersController
+sign_in	app/helpers/sessions_helper.rb	/^  def sign_in user$/;"	f	class:SessionsHelper
+sign_out	app/helpers/sessions_helper.rb	/^  def sign_out$/;"	f	class:SessionsHelper
+store_location	app/controllers/application_controller.rb	/^  def store_location$/;"	f	class:ApplicationController.admin_only
+store_location	spec/controllers/application_controller_spec.rb	/^  def store_location$/;"	f	class:admin_only
 town	app/controllers/static_pages_controller.rb	/^  def town$/;"	f	class:StaticPagesController
 update	app/controllers/children_controller.rb	/^  def update$/;"	f	class:ChildrenController
 update	app/controllers/presents_controller.rb	/^  def update$/;"	f	class:PresentsController
+update	app/controllers/users_controller.rb	/^  def update$/;"	f	class:UsersController
 url_valid?	app/validators/url_validator.rb	/^  def url_valid?(url)$/;"	f	class:UrlValidator
+user_params	app/controllers/users_controller.rb	/^    def user_params$/;"	f	class:UsersController
 validate_each	app/validators/url_validator.rb	/^  def validate_each(record, attribute, value)$/;"	f	class:UrlValidator

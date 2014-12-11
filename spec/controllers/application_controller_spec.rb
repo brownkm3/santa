@@ -1,8 +1,16 @@
-class ApplicationController < ActionController::Base
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
-  protect_from_forgery with: :exception
-  include SessionsHelper
+require 'rails_helper'
+
+RSpec.describe ApplicationController, :type => :controller do
+
+  describe "admin_only" do
+
+    let(:user) = User.create(
+    it "returns true if the current user is an admin" do
+
+    end
+
+  end
+end
 
   def admin_only
     return true if current_user.admin?
@@ -27,4 +35,3 @@ class ApplicationController < ActionController::Base
   def store_location
     session[:return_to] = request.url if request.get?
   end
-end

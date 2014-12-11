@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
   def new
   end
 
-  def create
+  def create username:, password: 
     user = User.find_by(username: params[:sessions][:username])
     if user && user.authenticate(params[:sessions][:password])
       reset_session
@@ -13,4 +13,5 @@ class SessionsController < ApplicationController
       render :new
     end
   end
+
 end
